@@ -16,7 +16,7 @@ resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://sergiokopplin.github.io/indigo
+url: https://bro-o.github.io
 # your url: https://bro-o.github.io
 
 permalink: /:title/
@@ -47,7 +47,7 @@ github: https://github.com/Bro-o
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-#medium: medium
+# medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: wjd132435@gmail.com
