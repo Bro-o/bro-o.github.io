@@ -2,7 +2,7 @@
 title: "Food Select App - 02 디자인 적용"
 layout: post
 date: 2020-09-26 22:10
-tag: html, css
+tag: web
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination

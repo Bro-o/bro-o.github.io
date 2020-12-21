@@ -2,9 +2,7 @@
 title: "Food Select App - 01 체크박스 카테고리"
 layout: post
 date: 2020-09-05 22:10
-tag: 
--html
--css
+tag: web
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
