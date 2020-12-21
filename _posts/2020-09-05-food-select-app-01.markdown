@@ -2,7 +2,7 @@
 title: "Food Select App - 01 체크박스 디자인"
 layout: post
 date: 2020-09-05 22:10
-tag:
+tag: jekyll
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
@@ -17,7 +17,7 @@ externalLink: false
  
 사용자가 카테고리를 선택하면 그에 해당하는 음식만 랜덤으로 보여주는 페이지를 만들기 위하여 체크박스 html을 추가하였다.
 
-![checkbox](https://bro-o.github.io/assets/images/checkbox.png)
+![checkbox](https://bro-o.github.io/assets/images/checkbox.PNG)
  
  
 ## html
