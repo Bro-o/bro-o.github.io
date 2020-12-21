@@ -1,5 +1,5 @@
 ---
-title: "Food Select App - 01 체크박스 디자인"
+title: "Food Select App - 01 체크박스 카테고리"
 layout: post
 date: 2020-09-05 22:10
 tag: 
