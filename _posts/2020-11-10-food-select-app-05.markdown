@@ -50,4 +50,4 @@ externalLink: false
     }
 </script>
 ```
-![checkbox](https://bro-o.github.io/assets/images/cart.png)
+![checkbox](https://bro-o.github.io/assets/images/cart.PNG)

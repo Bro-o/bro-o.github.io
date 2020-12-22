@@ -24,7 +24,7 @@ externalLink: false
 # 1. 랜덤이미지
 제일 기본이 되는 기능인 버튼을 눌렀을 때 이미지가 바뀌는 코드이다.
 
-![checkbox](https://bro-o.github.io/assets/images/random.png)
+![checkbox](https://bro-o.github.io/assets/images/random.PNG)
 
 ### HTML
 ```html

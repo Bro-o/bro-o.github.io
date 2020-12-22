@@ -105,7 +105,7 @@ cart.insertBefore(cartItem, end);
 ...
 cart.remove(cart);
 ```
-![checkbox](https://bro-o.github.io/assets/images/sidemenu.png)
+![checkbox](https://bro-o.github.io/assets/images/sidemenu.PNG)
 
 ## Toast 알림
 ### JavaScript (toast)
