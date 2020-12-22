@@ -12,13 +12,13 @@ author: Yun
 externalLink: false
 ---
 
- 0. 프로젝트 구상
- 1. 랜덤 이미지
- 2. 체크박스 카테고리
- 3. 디자인 적용
- 4. 사이드 메뉴
- 5. 장바구니
- 6. 호스팅
+ 0. [프로젝트 구상](https://bro-o.github.io/food-select-app-00/)
+ 1. [랜덤 이미지](https://bro-o.github.io/food-select-app-01/)
+ 2. [체크박스 카테고리](https://bro-o.github.io/food-select-app-02/)
+ 3. [디자인 적용](https://bro-o.github.io/food-select-app-03/)
+ 4. [사이드 메뉴](https://bro-o.github.io/food-select-app-04/)
+ 5. [장바구니](https://bro-o.github.io/food-select-app-05/)
+ 6. [호스팅](https://bro-o.github.io/food-select-app-06/)
 
 # 2. 체크박스 카테고리
  
