@@ -13,78 +13,64 @@ externalLink: false
 ---
 
 
-# 체크박스 카테고리
- 
-사용자가 카테고리를 선택하면 그에 해당하는 음식만 랜덤으로 보여주는 페이지를 만들기 위하여 체크박스 html을 추가하였다.
+ 0. 프로젝트 구상
+ 1. 랜덤 이미지
+ 2. 체크박스 카테고리
+ 3. 디자인 적용
+ 4. 사이드 메뉴
+ 5. 장바구니
+ 6. 호스팅
+---
+# 1. 랜덤이미지
+제일 기본이 되는 기능인 버튼을 눌렀을 때 이미지가 바뀌는 코드이다.
 
-![checkbox](https://bro-o.github.io/assets/images/checkbox.PNG)
- 
- 
-## html
-    <html>
-	    <head>
-	        <link rel="stylesheet" href="boxStyle.css" />
-	    </head>
-	    <body>
-	        <div class="container">
-	            <section class="todo">
-	                <ul class="todo-list">
-	                    <li>
-	                        <input type="checkbox" id="han" />
-	                        <label class="toggle" for="han"></label>
-	                        한식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="boon" value="2" />
-	                        <label class="toggle" for="boon"></label>
-	                        분식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="joong" />
-	                        <label class="toggle" for="joong"></label>
-	                        중식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="il" />
-	                        <label class="toggle" for="il"></label>
-	                        일식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="yang" />
-	                        <label class="toggle" for="yang"></label>
-	                        양식
-	                    </li>
-	                </ul>
-	                <ul class="todo-pagination">
-	                    <button id="next">Next</button>
-	                </ul>
-	            </section>
-	        </div>
-	    </body>
-	<html>
+![checkbox](https://bro-o.github.io/assets/images/random.png)
 
- Css 참고 : https://codepen.io/design8383/pen/arHeC
- 
-## JavaScript
+### HTML
+```html
+<!DOCTYPE html>
+<head>
+    <style>
+        .wrapper {
+            width: 500px;
+            height: 500px;
+            text-align: center;
+        }
+        #img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="food/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <img id="img" src="../food/picture/1.jpg" />
+        <button id="gen">Change</button>
+    </div>
+</body>
+```
 
-	var genButton = document.getElementById('gen'); // Generate button
-	var tmp = location.href.split('?');
-	var codeNum = String(tmp[1]);
+### JavaScript
+```javascript
+var genButton = document.getElementById('gen'); // Generate button
 
-	function genRandomMenu() {
-	    var picCode = "";
-	    while (true) {
-	        var number = String(Math.floor(Math.random() * 3) + 1);
-	        if (codeNum.indexOf(number)!=-1) {
-	            picCode = number + String(Math.floor(Math.random() * 3));
-	            break;
-	        } else continue;
-	    }
-	    document.getElementById('img').src = '../food/picture/' + picCode + '.png';
-	}
-					
-	genButton.addEventListener('click', genRandomMenu);
+function genRandomMenu() {
+	var number = Math.floor(Math.random() * 3) + 1;
+	document.getElementById('img').src = '../food/picture/' + number + '.jpg';	   
+}
 
-JavaScript 참고 : https://qja1998.github.io/2020-09-02-food-app/
-    
+genButton.addEventListener('click', genRandomMenu);
+```
+
+버튼에 EventListener를 추가하여 클릭 시 genRandomMenu 함수를 실행한다.
+```
+genButton.addEventListener('click', genRandomMenu);
+```
+랜덤으로 수를 발생시켜서 해당 번호의 이미지를 보여준다.
+```
+var number = Math.floor(Math.random() * 3) + 1;
+	document.getElementById('img').src = '../food/picture/' + number + '.jpg';
+```
+
 
