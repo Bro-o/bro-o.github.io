@@ -1,7 +1,7 @@
 ---
-title: "Food Select App - 02 디자인 적용"
+title: "Food Select App - 02 체크박스 카테고리"
 layout: post
-date: 2020-09-26 22:10
+date: 2020-09-05 22:10
 tag: web
 headerImage: true
 projects: true

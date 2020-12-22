@@ -1,7 +1,7 @@
 ---
-title: "Food Select App - 01 체크박스 카테고리"
+title: "Food Select App - 05 장바구니"
 layout: post
-date: 2020-09-05 22:10
+date: 2020-11-10 22:10
 tag: web
 headerImage: true
 projects: true
@@ -13,78 +13,41 @@ externalLink: false
 ---
 
 
-# 체크박스 카테고리
- 
-사용자가 카테고리를 선택하면 그에 해당하는 음식만 랜덤으로 보여주는 페이지를 만들기 위하여 체크박스 html을 추가하였다.
+ 0. 프로젝트 구상
+ 1. 랜덤 이미지
+ 2. 체크박스 카테고리
+ 3. 디자인 적용
+ 4. 사이드 메뉴
+ 5. 장바구니
+ 6. 호스팅
 
-![checkbox](https://bro-o.github.io/assets/images/checkbox.PNG)
- 
- 
-## html
-    <html>
-	    <head>
-	        <link rel="stylesheet" href="boxStyle.css" />
-	    </head>
-	    <body>
-	        <div class="container">
-	            <section class="todo">
-	                <ul class="todo-list">
-	                    <li>
-	                        <input type="checkbox" id="han" />
-	                        <label class="toggle" for="han"></label>
-	                        한식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="boon" value="2" />
-	                        <label class="toggle" for="boon"></label>
-	                        분식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="joong" />
-	                        <label class="toggle" for="joong"></label>
-	                        중식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="il" />
-	                        <label class="toggle" for="il"></label>
-	                        일식
-	                    </li>
-	                    <li>
-	                        <input type="checkbox" id="yang" />
-	                        <label class="toggle" for="yang"></label>
-	                        양식
-	                    </li>
-	                </ul>
-	                <ul class="todo-pagination">
-	                    <button id="next">Next</button>
-	                </ul>
-	            </section>
-	        </div>
-	    </body>
-	<html>
+# 5. 장바구니
+사이드 메뉴에 저장했던 음식들을 한눈에 볼 수 있도록 장바구니 페이지를 만들었다.
+```javascript
+<script>
+    var locationNum = location.href.split('&');
+    var tmp = locationNum[0].split('?');
+    var itemNum = tmp[1].split('/');
 
- Css 참고 : https://codepen.io/design8383/pen/arHeC
- 
-## JavaScript
+    for (var i = 1; i < itemNum.length; i++) {
 
-	var genButton = document.getElementById('gen'); // Generate button
-	var tmp = location.href.split('?');
-	var codeNum = String(tmp[1]);
+        const item = {};
 
-	function genRandomMenu() {
-	    var picCode = "";
-	    while (true) {
-	        var number = String(Math.floor(Math.random() * 3) + 1);
-	        if (codeNum.indexOf(number)!=-1) {
-	            picCode = number + String(Math.floor(Math.random() * 3));
-	            break;
-	        } else continue;
-	    }
-	    document.getElementById('img').src = '../food/picture/' + picCode + '.png';
-	}
-					
-	genButton.addEventListener('click', genRandomMenu);
+        item.img = "../picture/" + itemNum[i] + ".png";
+        console.log(item);
 
-JavaScript 참고 : https://qja1998.github.io/2020-09-02-food-app/
-    
+        const basketItem = document.createElement('div');
+        basketItem.classList.add("basket-item");
+        basketItem.setAttribute('id', 'basket-item' + itemNum[i]);
 
+        basketItem.innerHTML = '<img src=' + item.img + ' class="basket-image" id="basket-image"/> <button id="basket-item-remove/' + itemNum[i] + '" type="button" class="basket-item-remove" onClick="remove()"> <img id="cart-item-remove/' + itemNum[i] + '" class="remove-img" src="../picture/remove.png"/></button>';
+            
+        //select cart
+        const basket = document.getElementById("basket");
+        const end = document.getElementById("end");
+
+        basket.insertBefore(basketItem, end);
+    }
+</script>
+```
+![checkbox](https://bro-o.github.io/assets/images/cart.png)
