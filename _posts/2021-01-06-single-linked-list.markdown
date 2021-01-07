@@ -1,7 +1,7 @@
 ---
 title: "단일 연결 리스트"
 layout: post
-date: 2020-12-19 22:10
+date: 2021-01-06 22:10
 tag: DataStructure
 headerImage: true
 projects: true
