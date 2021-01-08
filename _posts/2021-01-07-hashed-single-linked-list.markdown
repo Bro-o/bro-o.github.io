@@ -29,11 +29,11 @@ int hashFunc(int key) {
     return key % 100;
 }
 ```
-![hashTable](https://bro-o.github.io/assets/images/hashTable.PNG)
+![hashTable](https://bro-o.github.io/assets/images/hashTable.PNG)  
 
 - 삽입  
 -동일한 키 값이 있는지 확인  
--없으면 알맞은 해쉬 값의 뒤의 리스트에 노드 삽입(정렬해서)
+-없으면 알맞은 해쉬 값의 뒤의 리스트에 노드 삽입(정렬해서)  
 ```c
 struct InfoNode* createNode(int key) {
     struct InfoNode* newNode;
