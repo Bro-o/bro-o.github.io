@@ -44,14 +44,12 @@ struct InfoNode* createNode(int key) {
 
     return newNode;
 }
-
 void insertNext(struct InfoNode** curr, int key) {
     struct InfoNode* newNode;
     newNode = createNode(key);
     newNode->next = (*curr)->next;
     (*curr)->next = newNode;
 }
-
 void insertTable(struct Table* t, int key) {
     int hKey = hashFunc(key);
     if (searchTable(t, key) != NULL) {
