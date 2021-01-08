@@ -52,7 +52,6 @@ void insertNext(struct InfoNode** curr, int key) {
     (*curr)->next = newNode;
 }
 
-
 void insertTable(struct Table* t, int key) {
     int hKey = hashFunc(key);
     if (searchTable(t, key) != NULL) {
